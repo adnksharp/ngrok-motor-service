@@ -1,6 +1,14 @@
-#define LED 2
 #include "web.h"
 #include "keys.h"
+
+byte LED=11;
+
+String endpoint [2] = {
+  "/enc_pos",
+  "/motor_cmd"
+};
+
+double position = 0.0, command = 0.0;
 
 void setup() 
 {
@@ -10,11 +18,13 @@ void setup()
   WiFi.begin(SSID, PASS);
   while(WiFi.status() != WL_CONNECTED)
   {
-    delay(500);
+    delay(25);
     digitalWrite(LED, !digitalRead(LED));
   }
   digitalWrite(LED, 0);
   //Serial.println(WiFi.localIP().toString());
 }
 
-void loop() {}
+void loop() 
+{
+}

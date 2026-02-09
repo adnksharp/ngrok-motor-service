@@ -1,8 +1,11 @@
 #include "web.h"
 
-void get (String uri, double *req)
+extern byte LED;
+
+void get(String uri, double *req)
 {
-	WiFiClient client;
+	WiFiClientSecure client;
+	client.setInsecure();
 	HTTPClient http;
 	String read = "{}";
 
@@ -15,5 +18,23 @@ void get (String uri, double *req)
 		JSONVar keys = obj.keys();
 		*req = double(obj[keys[0]]);
 	}
+	http.end();
+}
+
+void post(String uri, double *req)
+{
+	WiFiClientSecure client;
+	client.setInsecure();
+	HTTPClient http;
+
+	http.begin(client, uri);
+	http.addHeader("Content-Type", "application/json");
+	String msg = "{\"id\":\"" + WiFi.localIP().toString() +
+		"\",\"position\":" + String(*req) + "}";
+
+	if (http.POST(msg) != 200)
+		digitalWrite(LED, 1);
+	else
+		digitalWrite(LED, 0);
 	http.end();
 }
