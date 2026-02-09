@@ -16,6 +16,7 @@ service.post('/enc_pos',
     (req, res) => {
         const errors = validationResult(req)
         if (!errors.isEmpty()) {
+        	console.log(`SYS_IN:\tBAD`)
             return res.status(400).json({ errors: errors.array() })
         }
         position = req.body.position
