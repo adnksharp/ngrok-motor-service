@@ -27,4 +27,8 @@ void setup()
 
 void loop() 
 {
+  position += float(random(3) - 1) / 10;
+  get(server + endpoint[1], &command);
+  post(server + endpoint[0], &position);
+  delay(100);
 }
