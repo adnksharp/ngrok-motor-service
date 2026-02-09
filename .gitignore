@@ -68,8 +68,10 @@ web_modules/
 # dotenv environment variable files
 .env
 .env.*
+env.m
 !.env.example
 controller/keys.h
+math/config.mat
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
