@@ -65,8 +65,7 @@ https://github.com/adnksharp/ngrok-motor-service.git
 > [!TIP]
 > Como recomendación elige una carpeta lo más cercana a `C:\`
 
-<img alt="screenshot" width="45%" src="./img/screenshot-git-gui-0.png"/>
-<img alt="screenshot" width="45%" src="./img/screenshot-git-gui-1.png"/>
+<img alt="screenshot" width="45%" src="./img/screenshot-git-gui-0.png"/><img alt="screenshot" width="45%" src="./img/screenshot-git-gui-1.png"/>
 
 #### 2. Desde VS-Code abre la carpeta donde clonaste el repositorio
 
