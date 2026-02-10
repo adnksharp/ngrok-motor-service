@@ -1,6 +1,6 @@
 # ngrok-motor-service
 
-Servidor global usando node.js ([ngrok](https://ngrok.com/)) + sketch de ejemplo de Arduino para ESP32 ([WiFiClientSecure.h](https://github.com/espressif/arduino-esp32/tree/master/libraries/NetworkClientSecure)) + funciones de ejemplo para Matlab([webread](https://la.mathworks.com/help/matlab/ref/webread.html)/[webwrite](https://la.mathworks.com/help/matlab/ref/webwrite.html)).
+Servidor global usando node.js ([ngrok](https://ngrok.com/docs/getting-started/cloud-endpoints-quickstart#javascript)) + sketch de ejemplo de Arduino para ESP32 ([WiFiClientSecure.h](https://github.com/espressif/arduino-esp32/tree/master/libraries/NetworkClientSecure)) + funciones de ejemplo para Matlab([webread](https://la.mathworks.com/help/matlab/ref/webread.html)/[webwrite](https://la.mathworks.com/help/matlab/ref/webwrite.html)).
 
 
 
@@ -71,7 +71,7 @@ https://github.com/adnksharp/ngrok-motor-service.git
 
 #### 2. Desde VS-Code abre la carpeta donde clonaste el repositorio
 
-<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-0.png"/>
+<img alt="screenshot" src="./img/screenshot-vs-code-0.png"/>
 
 #### 3. Desde el `command prompt` en la terminal instala las dependencias necesarias
 
@@ -147,7 +147,7 @@ La estructura de los archivos debe de quedar de la siguiente manera
 
 ### Servidor
 
-En el `command prompt` en la terminal ejecuta `npm run start`. Si el archivo `.env` es correcto se mosotrara un mensaje similar al siguiente:
+En el `command prompt` de la terminal de vs-code ejecuta `npm run start`. Si el archivo `.env` es correcto se mosotrara un mensaje similar al siguiente:
 
 ```bash
 > server@1.0.0 start

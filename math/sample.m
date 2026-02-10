@@ -1,7 +1,7 @@
-%%Sample for use `get_request`|`get_post` functions
+%% Sample for use `get_request`|`get_post` functions
 clear; clc;
 
-%%Config needed
+%% Config needed
 %--------------------------------------------------
 load('config.mat');
 server_get = [NGROK_DOMAIN, '/enc_pos'];
