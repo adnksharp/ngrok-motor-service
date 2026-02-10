@@ -1,6 +1,6 @@
 # ngrok-motor-service
 
-Sistema multilenguaje para conexión de ESP32 a servidores con [ngrok](https://ngrok.com/)
+Servidor global usando node.js ([ngrok](https://ngrok.com/)) + sketch de ejemplo de Arduino para ESP32 ([WiFiClientSecure.h](#)) + funciones de ejemplo para Matlab([webread](https://la.mathworks.com/help/matlab/ref/webread.html)/[webwrite](https://la.mathworks.com/help/matlab/ref/webwrite.html)).
 
 ## Requisitos
 
