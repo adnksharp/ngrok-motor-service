@@ -65,12 +65,12 @@ https://github.com/adnksharp/ngrok-motor-service.git
 > [!TIP]
 > Como recomendación elige una carpeta lo más cercana a `C:\`
 
-[<img alt="screenshot" width="45%" src="./img/screenshot-git-gui-0.png"/>](#)
-[<img alt="screenshot" width="45%" src="./img/screenshot-git-gui-1.png"/>](#)
+<img alt="screenshot" width="45%" src="./img/screenshot-git-gui-0.png"/>
+<img alt="screenshot" width="45%" src="./img/screenshot-git-gui-1.png"/>
 
 #### 2. Desde VS-Code abre la carpeta donde clonaste el repositorio
 
-[<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-0.png"/>](#)
+<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-0.png"/>
 
 #### 3. Desde el `command prompt` en la terminal instala las dependencias necesarias
 
@@ -78,8 +78,8 @@ https://github.com/adnksharp/ngrok-motor-service.git
 npm i
 ```
 
-[<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-1.png"/>](#)
-[<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-2.png"/>](#)
+<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-1.png"/>
+<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-2.png"/>
 
 ## Configuración
 
