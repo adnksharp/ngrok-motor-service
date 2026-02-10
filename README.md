@@ -1,6 +1,8 @@
 # ngrok-motor-service
 
-Servidor global usando node.js ([ngrok](https://ngrok.com/)) + sketch de ejemplo de Arduino para ESP32 ([WiFiClientSecure.h](#)) + funciones de ejemplo para Matlab([webread](https://la.mathworks.com/help/matlab/ref/webread.html)/[webwrite](https://la.mathworks.com/help/matlab/ref/webwrite.html)).
+Servidor global usando node.js ([ngrok](https://ngrok.com/)) + sketch de ejemplo de Arduino para ESP32 ([WiFiClientSecure.h](https://github.com/espressif/arduino-esp32/tree/master/libraries/NetworkClientSecure)) + funciones de ejemplo para Matlab([webread](https://la.mathworks.com/help/matlab/ref/webread.html)/[webwrite](https://la.mathworks.com/help/matlab/ref/webwrite.html)).
+
+
 
 ## Requisitos
 
@@ -65,7 +67,7 @@ https://github.com/adnksharp/ngrok-motor-service.git
 > [!TIP]
 > Como recomendación elige una carpeta lo más cercana a `C:\`
 
-<img alt="screenshot" width="42%" src="./img/screenshot-git-gui-0.png"/><img alt="screenshot" width="42%" src="./img/screenshot-git-gui-1.png"/>
+<img alt="screenshot" width="45%" src="./img/screenshot-git-gui-0.png"/><img alt="screenshot" width="45%" src="./img/screenshot-git-gui-1.png"/>
 
 #### 2. Desde VS-Code abre la carpeta donde clonaste el repositorio
 
@@ -77,8 +79,7 @@ https://github.com/adnksharp/ngrok-motor-service.git
 npm i
 ```
 
-<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-1.png"/>
-<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-2.png"/>
+<img alt="screenshot" width="45%" src="./img/screenshot-vs-code-1.png"/><img alt="screenshot" width="45%" src="./img/screenshot-vs-code-2.png"/>
 
 ## Configuración
 
@@ -141,3 +142,33 @@ La estructura de los archivos debe de quedar de la siguiente manera
 ├── package-lock.json
 └── server.js
 ```
+
+## Uso
+
+### Servidor
+
+En el `command prompt` en la terminal ejecuta `npm run start`. Si el archivo `.env` es correcto se mosotrara un mensaje similar al siguiente:
+
+```bash
+> server@1.0.0 start
+> node index.js
+
+[dotenv@17.2.4] injecting env (3) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+
+Local server:
+	http://localhost:8000
+
+ngrok server:
+	https://nonfollowing-forx-daemon.ngrok-free.dev
+```
+
+#### Microcontrolador
+
+Desde la IDE de Arduino carga el sketch de la carpeta `controller` al ESP32. El microcontrolador muestra su estatus a traves de un led conectado al pin 11:
+
+- Parpadea cada 50 ms al inicio cuando no se puede conectar a la red wifi.
+- Enciende cuando no puede enviar mensajes al servidor.
+
+#### Matlab
+
+En matlab abre la carpeta `math`. El archivo [sample.m](./math/sample.m) muestra un ejemplo de como usar las funciones dentro de un proyecto de Matlab.
