@@ -59,7 +59,6 @@ Servidor global usando node.js ([ngrok](https://ngrok.com/docs/getting-started/c
 
 <img alt="screenshot" width="32%" src="./img/install-arduino-1.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-2.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-3.png"/>
 
-> [!IMPORTANT]
 > La instalación de Arduino incluye el software para trabajar con diferentes dispositivos por puerto serial, es recomendado instalarlos todos
 
 <img alt="screenshot" width="32%" src="./img/install-arduino-drivers-1.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-drivers-2.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-drivers-3.png"/>
