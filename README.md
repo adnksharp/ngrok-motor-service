@@ -8,45 +8,116 @@ Servidor global usando node.js ([ngrok](https://ngrok.com/docs/getting-started/c
 
 <details><summary><h3>VS Code</h3></summary>
 
-[<img alt="screenshot" src="./img/screenshot-code.png"/>](#)
+<img alt="screenshot" src="./img/screenshot-code.png"/>
 
-[![DESCARGAR](https://custom-icon-badges.demolab.com/badge/DESCARGAR-ffffff?logo=tinyurl&logoColor=000)](https://code.visualstudio.com/download)
+#### Configuración de instalación recomendada
+
+<img alt="screenshot" width="49%" src="./img/install-code-1.png"/><img alt="screenshot" width="49%" src="./img/install-code-2.png"/>
+
+<a href="https://code.visualstudio.com/download">
+    <img src="https://img.shields.io/badge/DESCARGAR-white?style=for-the-badge&color=0090ff"/>
+</a>
 
 </details>
 
 
 <details><summary><h3>Git</h3></summary>
 
-[<img alt="screenshot" src="./img/screenshot-git.png"/>](#)
+<img alt="screenshot" src="./img/screenshot-git.png"/>
 
-[![DESCARGAR](https://custom-icon-badges.demolab.com/badge/DESCARGAR-ffffff?logo=tinyurl&logoColor=000)](https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.1/Git-2.53.0-64-bit.exe)
+#### Configuración de instalación recomendada
+
+<img alt="screenshot" width="19.5%" src="./img/install-git-1.png"/><img alt="screenshot" width="19%" src="./img/install-git-2.png"/><img alt="screenshot" width="19%" src="./img/install-git-3.png"/><img alt="screenshot" width="19%" src="./img/install-git-4.png"/><img alt="screenshot" width="19.5%" src="./img/install-git-5.png"/><img alt="screenshot" width="16%" src="./img/install-git-6.png"/><img alt="screenshot" width="16%" src="./img/install-git-7.png"/><img alt="screenshot" width="16%" src="./img/install-git-8.png"/><img alt="screenshot" width="16%" src="./img/install-git-9.png"/><img alt="screenshot" width="16%" src="./img/install-git-10.png"/><img alt="screenshot" width="16%" src="./img/install-git-11.png"/>
+
+<a href="https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.1/Git-2.53.0-64-bit.exe">
+    <img src="https://img.shields.io/badge/DESCARGAR-white?style=for-the-badge&color=0090ff"/>
+</a>
 
 </details>
 
 
 <details><summary><h3>Node.js</h3></summary>
 
-[<img alt="screenshot" src="./img/screenshot-node-js.png"/>](#)
+<img alt="screenshot" src="./img/screenshot-node-js.png"/>
 
-[![DESCARGAR](https://custom-icon-badges.demolab.com/badge/DESCARGAR-ffffff?logo=tinyurl&logoColor=000)](https://nodejs.org/dist/v25.6.0/node-v25.6.0-x64.msi)
+#### Configuración de instalación recomendada
+
+<img alt="screenshot" width="24%" src="./img/install-node-1.png"/><img alt="screenshot" width="24%" src="./img/install-node-2.png"/><img alt="screenshot" width="24%" src="./img/install-node-3.png"/><img alt="screenshot" width="24%" src="./img/install-node-4.png"/>
+
+<a href="https://nodejs.org/dist/v25.6.0/node-v25.6.0-x64.msi">
+    <img src="https://img.shields.io/badge/DESCARGAR-white?style=for-the-badge&color=0090ff"/>
+</a>
 
 </details>
 
 
 <details><summary><h3>Arduino</h3></summary>
 
-[<img alt="screenshot" src="./img/screenshot-arduino.png"/>](#)
+<img alt="screenshot" src="./img/screenshot-arduino.png"/>
 
-[![DESCARGAR](https://custom-icon-badges.demolab.com/badge/DESCARGAR-ffffff?logo=tinyurl&logoColor=000)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.7_Windows_64bit.msi)
+#### Configuración de instalación recomendada
+
+<img alt="screenshot" width="32%" src="./img/install-arduino-1.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-2.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-3.png"/>
+
+> [!INFO]
+> La instalación de Arduino incluye el software para trabajar con diferentes dispositivos por puerto serial, es recomendado instalarlos todos
+
+<img alt="screenshot" width="32%" src="./img/install-arduino-drivers-1.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-drivers-2.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-drivers-3.png"/>
+
+<a href="https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.7_Windows_64bit.msi">
+    <img src="https://img.shields.io/badge/DESCARGAR-white?style=for-the-badge&color=0090ff"/>
+</a>
+
+#### Drivers opcionales
+
+En algunos casos es necesario instalar los drivers `CH340` y `CP2102`
+
+<img alt="screenshot" width="49%" src="./img/install-drivers-1.png"/><img alt="screenshot" width="49%" src="./img/install-drivers-2.png"/>
+
+<a href="https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip">
+    <img src="https://img.shields.io/badge/DESCARGAR_CP2102_drivers-black?style=for-the-badge&color=0090ff"/>
+</a>
+
+<a href="https://sparks.gogo.co.nz/assets/_site_/downloads/CH34x_Install_Windows_v3_4.zip">
+    <img src="https://img.shields.io/badge/DESCARGAR_CH340_Drivers-white?style=for-the-badge&color=0090ff"/>
+</a>
+
+#### ESP32 en Arduino-IDE
+
+Los servidores de Espressif en ocasiones tardan en responer más del tiempo que tolera Arduino por defecto, para evitar errores es necesario agregar el siguiente contenido en `C:\Users\<your_username>\.arduinoIDE\arduino-cli.yaml` cambiando `<your_username>` por el nombre de la carpeta de tu usuario en `C:\Users\`:
+
+```yaml
+network:
+	connection_timeout: 300s
+```
+
+<img alt="screenshot" src="./img/install-arduino-esp32-4.png"/>
+
+Con `arduino-cli.yaml` modificado, dentro de la IDE de Arduino agrega la siguiende dirección en `File > Preferences > Additional boards manager URLs`:
+
+```text
+https://espressif.github.io/arduino-esp32/package_esp32_index.json
+```
+
+En gestor de placas de la IDE, instala **esp32 by Espressif Systems** (`esp32:esp32`)
+
+<img alt="screenshot" width="32%" src="./img/install-arduino-esp32-1.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-esp32-2.png"/><img alt="screenshot" width="32%" src="./img/install-arduino-esp32-3.png"/>
+
 
 </details>
 
 
 <details><summary><h3>Matlab</h3></summary>
 
-[<img alt="screenshot" src="./img/screenshot-matlab.png"/>](#)
+<img alt="screenshot" src="./img/screenshot-matlab.png"/>
 
-[![DESCARGAR](https://custom-icon-badges.demolab.com/badge/DESCARGAR-ffffff?logo=tinyurl&logoColor=000)](https://la.mathworks.com/downloads/)
+#### Configuración de instalación recomendada
+
+<img alt="screenshot" width="32%" src="./img/install-matlab-1.png"/><img alt="screenshot" width="32%" src="./img/install-matlab-2.png"/><img alt="screenshot" width="32%" src="./img/install-matlab-3.png"/>
+
+<a href="https://la.mathworks.com/downloads/">
+    <img src="https://img.shields.io/badge/DESCARGAR-white?style=for-the-badge&color=0090ff"/>
+</a>
 
 </details>
 
@@ -126,16 +197,16 @@ La estructura de los archivos debe de quedar de la siguiente manera
 ```text
 .
 ├── controller
-│   ├── controller.ino
-│   ├── keys.h
-│   ├── web.cpp
-│   └── web.h
+│   ├── controller.ino
+│   ├── keys.h
+│   ├── web.cpp
+│   └── web.h
 ├── math
-│   ├── config.mat
-│   ├── env.m
-│   ├── get_request.m
-│   ├── post_request.m
-│   └── sample.m
+│   ├── config.mat
+│   ├── env.m
+│   ├── get_request.m
+│   ├── post_request.m
+│   └── sample.m
 ├── .env
 ├── index.js
 ├── package.json
